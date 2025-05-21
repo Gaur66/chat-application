@@ -20,7 +20,7 @@ const fetchuser= async()=>{
     const result= await axios.get(`${serverUrl}/api/message/get/${selectedUser?._id}`,{withCredentials:true})
 
 
-    dispatch(setMessageData(result.data))
+    dispatch(setMessageData(result?.data?.data))
     }
     catch(error){
 console.log(error)
