@@ -65,16 +65,21 @@ const {receiver}= req.params
     participants:{$all:[sender,receiver]}
  }).populate('messages')
 
-console.log(conversation,"kdkdk")
+
   if(!conversation){
 res.status(400).json({
     success:false,
-    message:'conversation not found'
+    message:'conversation not found',
+    data:[]
+    
 })
   }
   
  
-  return res.status(200).json(conversation?.messages)
+  return res.status(200).json({   
+     success:true,
+    message:'conversation  found',
+    data:conversation?.messages})
     }
     catch(error){
 res.status(500).json({
