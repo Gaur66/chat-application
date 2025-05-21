@@ -16,7 +16,8 @@ dotenv.config()
 app.use(express.json())
 app.use(cors({
     origin:"https://chit-chat-14z7.onrender.com",
-    credentials:true
+    credentials:true,
+     optionsSuccessStatus: 200,
 }))
 app.use(cookieParser())
 
