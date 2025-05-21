@@ -104,7 +104,7 @@ export const login = async (req, res) => {
 
 export const logOut = async(req,res)=>{
     try{
-res.cookie("token", {
+res.clearCookie("token", {
   httpOnly: true,
   secure: true, // Only over HTTPS
   sameSite: "None", // For cross-site cookies (like between frontend and backend on different domains)
