@@ -8,7 +8,7 @@ const server= http.createServer(app)
 
 const io= new Server(server,{
     cors:{
-  origin:'http://localhost:5173'
+  origin:'https://chit-chat-14z7.onrender.com'
     }
 })
 const userSocketMap={}
