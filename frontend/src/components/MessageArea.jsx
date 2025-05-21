@@ -106,7 +106,7 @@ return()=>{
           {/* Messages Display Placeholder */}
           <div className="flex-1 overflow-y-auto p-4 ">
             {/* Replace with actual messages */}
-            {messageData && messageData.map((msg) =>
+            {messageData.length>0 && messageData.map((msg) =>
         msg.sender === userData._id ? (
           <SenderMessage key={msg._id} text={msg.message} image={msg.image} />
         ) : (
